@@ -1,6 +1,6 @@
 package com.canbartukilic.classesandfunctions
 
-class Simpsons(var name:String, var age:Int, job:String) {
+class Simpsons(var name:String, var age:Int?, var job:String) {
 
     var hairColor = ""
 

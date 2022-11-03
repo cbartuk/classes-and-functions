@@ -7,29 +7,87 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="91dp"
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="284dp"
-        android:layout_marginBottom="38dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="416dp"
+        android:ems="10"
+        android:hint="Simpson Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ageText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Simpson Age"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/jobText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <EditText
+        android:id="@+id/jobText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="Simpson Job"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="61dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobText" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="198dp"
-        android:onClick="helloKotlin"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="102dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:onClick="makeSimpson"
+        android:text="Make Simpson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/resultText"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="scopeExample"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
